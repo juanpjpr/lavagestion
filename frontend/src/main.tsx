@@ -6,6 +6,7 @@ import { DashboardLayout } from './components/DashboardLayout';
 import { OrdersPage } from './pages/OrdersPage';
 import { NewOrderPage } from './pages/NewOrderPage';
 import { ReportsPage } from './pages/ReportsPage';
+import { SettingsPage } from './pages/SettingsPage';
 import { isAuthenticated } from './services/api';
 import './styles.css';
 
@@ -31,6 +32,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
           <Route path="orders" element={<OrdersPage />} />
           <Route path="orders/new" element={<NewOrderPage />} />
           <Route path="reports" element={<ReportsPage />} />
+          <Route path="settings" element={<SettingsPage />} />
         </Route>
       </Routes>
     </BrowserRouter>
