@@ -30,6 +30,13 @@ app.use('/api/clients', authenticate, clientsRoutes);
 app.use('/api/orders', authenticate, ordersRoutes);
 app.use('/api/reports', authenticate, reportsRoutes);
 
+// --- Frontend app (React SPA) ---
+const frontendPath = path.join(__dirname, '../../frontend/dist');
+app.use('/app', express.static(frontendPath));
+app.get('/app/*', (_req, res) => {
+  res.sendFile(path.join(frontendPath, 'index.html'));
+});
+
 // --- Landing page (static files) ---
 const landingPath = path.join(__dirname, '../landing');
 app.use(express.static(landingPath));
