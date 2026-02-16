@@ -8,8 +8,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 object RetrofitClient {
 
-    // Para emulador Android usa 10.0.2.2, para dispositivo físico usa la IP de tu PC
-    private const val BASE_URL = "http://10.0.2.2:3001/api/"
+    private const val BASE_URL = "https://lavagestion.onrender.com/api/"
 
     private var token: String? = null
 

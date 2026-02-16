@@ -1,5 +1,6 @@
 import express from 'express';
 import cors from 'cors';
+import path from 'path';
 import { env } from './config/env';
 import { errorHandler } from './middlewares/errorHandler';
 import { authenticate } from './middlewares/auth';
@@ -28,6 +29,14 @@ app.use('/api/auth', authRoutes);
 app.use('/api/clients', authenticate, clientsRoutes);
 app.use('/api/orders', authenticate, ordersRoutes);
 app.use('/api/reports', authenticate, reportsRoutes);
+
+// --- Landing page (static files) ---
+const landingPath = path.join(__dirname, '../landing');
+app.use(express.static(landingPath));
+
+app.get('/', (_req, res) => {
+  res.sendFile(path.join(landingPath, 'index.html'));
+});
 
 // --- Error handler (debe ir al final) ---
 app.use(errorHandler);
