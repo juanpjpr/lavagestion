@@ -1,0 +1,101 @@
+<resources>
+    <string name="app_name">LavaGestión</string>
+
+    <!-- Login -->
+    <string name="login_title">LavaGestión</string>
+    <string name="login_create_account">계정 만들기</string>
+    <string name="login_sign_in">로그인</string>
+    <string name="login_tenant_name">세탁소 이름</string>
+    <string name="login_tenant_name_hint">돈페드로 세탁소</string>
+    <string name="login_user_name">이름</string>
+    <string name="login_user_name_hint">Pedro García</string>
+    <string name="login_tenant_slug">매장 ID</string>
+    <string name="login_tenant_slug_hint">don-pedro-laundry</string>
+    <string name="login_email">이메일</string>
+    <string name="login_email_hint">admin@mylaundry.com</string>
+    <string name="login_password">비밀번호</string>
+    <string name="login_register_btn">계정 만들기</string>
+    <string name="login_enter_btn">로그인</string>
+    <string name="login_has_account">이미 계정이 있으신가요? 로그인</string>
+    <string name="login_no_account">계정이 없으신가요? 회원가입</string>
+    <string name="login_error">로그인 오류</string>
+    <string name="register_error">회원가입 오류</string>
+
+    <!-- Orders -->
+    <string name="orders_title">주문</string>
+    <string name="orders_new">새 주문</string>
+    <string name="orders_empty">주문이 없습니다</string>
+    <string name="orders_items">%d벌</string>
+    <string name="orders_advance_to">%s(으)로 변경</string>
+
+    <!-- Filters -->
+    <string name="filter_all">전체</string>
+    <string name="filter_received">접수</string>
+    <string name="filter_washing">세탁중</string>
+    <string name="filter_ready">완료</string>
+    <string name="filter_delivered">수령</string>
+
+    <!-- Status labels -->
+    <string name="status_received">접수</string>
+    <string name="status_washing">세탁중</string>
+    <string name="status_ready">완료</string>
+    <string name="status_delivered">수령</string>
+
+    <!-- New order -->
+    <string name="new_order_title">새 주문</string>
+    <string name="new_order_back">뒤로</string>
+    <string name="new_order_client_section">고객 정보</string>
+    <string name="new_order_name">이름</string>
+    <string name="new_order_name_hint">María García</string>
+    <string name="new_order_phone">전화번호</string>
+    <string name="new_order_phone_hint">1155551234</string>
+    <string name="new_order_items_section">세탁물</string>
+    <string name="new_order_add">추가</string>
+    <string name="new_order_item_label">세탁물 %d</string>
+    <string name="new_order_remove">삭제</string>
+    <string name="new_order_description">설명</string>
+    <string name="new_order_description_hint">흰색 셔츠</string>
+    <string name="new_order_qty">수량</string>
+    <string name="new_order_price">가격</string>
+    <string name="new_order_notes">메모 (선택)</string>
+    <string name="new_order_notes_hint">목 부분 얼룩…</string>
+    <string name="new_order_submit">주문 생성</string>
+    <string name="new_order_total">합계: $%s</string>
+
+    <!-- Reports -->
+    <string name="reports_title">일일 리포트</string>
+    <string name="reports_orders">주문</string>
+    <string name="reports_income">수입</string>
+    <string name="reports_average">평균</string>
+    <string name="reports_by_status">상태별 주문</string>
+    <string name="reports_no_data">이 날짜에 대한 데이터가 없습니다</string>
+
+    <!-- Navigation -->
+    <string name="nav_orders">주문</string>
+    <string name="nav_reports">리포트</string>
+    <string name="nav_settings">설정</string>
+
+    <!-- Language selector -->
+    <string name="lang_es">ES</string>
+    <string name="lang_en">EN</string>
+    <string name="lang_ko">한</string>
+    <string name="lang_zh">中</string>
+
+    <!-- Notify -->
+    <string name="notify_title">고객에게 알리기</string>
+    <string name="notify_message">%s님에게 WhatsApp으로 주문이 완료되었다고 알리시겠습니까?</string>
+    <string name="notify_yes">네, 알리기</string>
+    <string name="notify_no">아니오</string>
+    <string name="notify_btn">WhatsApp으로 알리기</string>
+    <string name="notify_whatsapp_text">안녕하세요! 주문 #%s이(가) 수령 준비되었습니다. 기다리고 있겠습니다!</string>
+
+    <!-- Settings -->
+    <string name="settings_title">설정</string>
+    <string name="settings_language">언어</string>
+    <string name="settings_lang_spanish">Español</string>
+    <string name="settings_lang_english">English</string>
+    <string name="settings_lang_korean">한국어</string>
+    <string name="settings_lang_chinese">中文</string>
+    <string name="settings_account">계정</string>
+    <string name="settings_logout">로그아웃</string>
+</resources>

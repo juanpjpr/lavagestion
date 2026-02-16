@@ -1,0 +1,127 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// ============================================
+// TENANT (cada tintorería/lavadero)
+// ============================================
+model Tenant {
+  id        String   @id @default(uuid())
+  name      String   // "Lavandería Don Pedro"
+  slug      String   @unique // "lavanderia-don-pedro"
+  phone     String?
+  address   String?
+  isActive  Boolean  @default(true)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  users         User[]
+  clients       Client[]
+  orders        Order[]
+  ticketCounter Int      @default(0) // Autoincremental por tienda
+
+  @@map("tenants")
+}
+
+// ============================================
+// USER (usuarios del sistema, dueños/empleados)
+// ============================================
+model User {
+  id        String   @id @default(uuid())
+  email     String
+  password  String
+  name      String
+  role      UserRole @default(EMPLOYEE)
+  isActive  Boolean  @default(true)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  tenantId String
+  tenant   Tenant @relation(fields: [tenantId], references: [id])
+
+  @@unique([email, tenantId])
+  @@index([tenantId])
+  @@map("users")
+}
+
+enum UserRole {
+  OWNER
+  EMPLOYEE
+}
+
+// ============================================
+// CLIENT (clientes del lavadero)
+// ============================================
+model Client {
+  id        String   @id @default(uuid())
+  name      String
+  phone     String
+  email     String?
+  notes     String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  tenantId String
+  tenant   Tenant  @relation(fields: [tenantId], references: [id])
+  orders   Order[]
+
+  @@unique([phone, tenantId]) // Teléfono único por tenant
+  @@index([tenantId])
+  @@map("clients")
+}
+
+// ============================================
+// ORDER (pedido/ticket)
+// ============================================
+model Order {
+  id            String      @id @default(uuid())
+  ticketNumber  Int         // Autoincremental por tenant
+  status        OrderStatus @default(RECEIVED)
+  totalPrice    Decimal     @db.Decimal(10, 2)
+  notes         String?
+  estimatedDate DateTime?   // Fecha estimada de entrega
+  deliveredAt   DateTime?   // Fecha real de entrega
+  createdAt     DateTime    @default(now())
+  updatedAt     DateTime    @updatedAt
+
+  tenantId String
+  tenant   Tenant @relation(fields: [tenantId], references: [id])
+
+  clientId String
+  client   Client @relation(fields: [clientId], references: [id])
+
+  items OrderItem[]
+
+  @@unique([ticketNumber, tenantId]) // Ticket único por tenant
+  @@index([tenantId])
+  @@index([tenantId, status])
+  @@index([tenantId, createdAt])
+  @@map("orders")
+}
+
+enum OrderStatus {
+  RECEIVED  // RECIBIDO
+  WASHING   // LAVANDO
+  READY     // LISTO
+  DELIVERED // ENTREGADO
+}
+
+// ============================================
+// ORDER ITEM (prendas del pedido)
+// ============================================
+model OrderItem {
+  id          String  @id @default(uuid())
+  description String  // "Camisa blanca", "Pantalón jean"
+  quantity    Int     @default(1)
+  unitPrice   Decimal @db.Decimal(10, 2)
+
+  orderId String
+  order   Order  @relation(fields: [orderId], references: [id], onDelete: Cascade)
+
+  @@map("order_items")
+}

@@ -1,0 +1,101 @@
+<resources>
+    <string name="app_name">LavaGestión</string>
+
+    <!-- Login -->
+    <string name="login_title">LavaGestión</string>
+    <string name="login_create_account">Crear cuenta</string>
+    <string name="login_sign_in">Iniciar sesión</string>
+    <string name="login_tenant_name">Nombre de tu Lavadero</string>
+    <string name="login_tenant_name_hint">Lavandería Don Pedro</string>
+    <string name="login_user_name">Tu nombre</string>
+    <string name="login_user_name_hint">Pedro García</string>
+    <string name="login_tenant_slug">ID de Tienda</string>
+    <string name="login_tenant_slug_hint">lavanderia-don-pedro</string>
+    <string name="login_email">Email</string>
+    <string name="login_email_hint">admin@milavadero.com</string>
+    <string name="login_password">Contraseña</string>
+    <string name="login_register_btn">Crear Cuenta</string>
+    <string name="login_enter_btn">Entrar</string>
+    <string name="login_has_account">¿Ya tenés cuenta? Iniciar sesión</string>
+    <string name="login_no_account">¿No tenés cuenta? Registrarse</string>
+    <string name="login_error">Error al iniciar sesión</string>
+    <string name="register_error">Error al registrarse</string>
+
+    <!-- Orders -->
+    <string name="orders_title">Pedidos</string>
+    <string name="orders_new">Nuevo pedido</string>
+    <string name="orders_empty">No hay pedidos</string>
+    <string name="orders_items">%d prenda(s)</string>
+    <string name="orders_advance_to">Pasar a %s</string>
+
+    <!-- Filters -->
+    <string name="filter_all">Todos</string>
+    <string name="filter_received">Recibido</string>
+    <string name="filter_washing">Lavando</string>
+    <string name="filter_ready">Listo</string>
+    <string name="filter_delivered">Entregado</string>
+
+    <!-- Status labels (used in badges) -->
+    <string name="status_received">Recibido</string>
+    <string name="status_washing">Lavando</string>
+    <string name="status_ready">Listo</string>
+    <string name="status_delivered">Entregado</string>
+
+    <!-- New order -->
+    <string name="new_order_title">Nuevo Pedido</string>
+    <string name="new_order_back">Volver</string>
+    <string name="new_order_client_section">Datos del Cliente</string>
+    <string name="new_order_name">Nombre</string>
+    <string name="new_order_name_hint">María García</string>
+    <string name="new_order_phone">Teléfono</string>
+    <string name="new_order_phone_hint">1155551234</string>
+    <string name="new_order_items_section">Prendas</string>
+    <string name="new_order_add">Agregar</string>
+    <string name="new_order_item_label">Prenda %d</string>
+    <string name="new_order_remove">Eliminar</string>
+    <string name="new_order_description">Descripción</string>
+    <string name="new_order_description_hint">Camisa blanca</string>
+    <string name="new_order_qty">Cant.</string>
+    <string name="new_order_price">Precio</string>
+    <string name="new_order_notes">Notas (opcional)</string>
+    <string name="new_order_notes_hint">Mancha en el cuello…</string>
+    <string name="new_order_submit">Crear Pedido</string>
+    <string name="new_order_total">Total: $%s</string>
+
+    <!-- Reports -->
+    <string name="reports_title">Reporte Diario</string>
+    <string name="reports_orders">Pedidos</string>
+    <string name="reports_income">Ingresos</string>
+    <string name="reports_average">Promedio</string>
+    <string name="reports_by_status">Pedidos por Estado</string>
+    <string name="reports_no_data">No hay datos para esta fecha</string>
+
+    <!-- Navigation -->
+    <string name="nav_orders">Pedidos</string>
+    <string name="nav_reports">Reportes</string>
+    <string name="nav_settings">Ajustes</string>
+
+    <!-- Language selector -->
+    <string name="lang_es">ES</string>
+    <string name="lang_en">EN</string>
+    <string name="lang_ko">한</string>
+    <string name="lang_zh">中</string>
+
+    <!-- Notify -->
+    <string name="notify_title">Avisar al cliente</string>
+    <string name="notify_message">¿Querés avisarle a %s por WhatsApp que su pedido está listo?</string>
+    <string name="notify_yes">Sí, avisar</string>
+    <string name="notify_no">No</string>
+    <string name="notify_btn">Avisar por WhatsApp</string>
+    <string name="notify_whatsapp_text">Hola! Tu pedido #%s está listo para retirar. Te esperamos!</string>
+
+    <!-- Settings -->
+    <string name="settings_title">Ajustes</string>
+    <string name="settings_language">Idioma</string>
+    <string name="settings_lang_spanish">Español</string>
+    <string name="settings_lang_english">English</string>
+    <string name="settings_lang_korean">한국어</string>
+    <string name="settings_lang_chinese">中文</string>
+    <string name="settings_account">Cuenta</string>
+    <string name="settings_logout">Cerrar sesión</string>
+</resources>

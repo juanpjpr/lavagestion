@@ -1,0 +1,101 @@
+<resources>
+    <string name="app_name">LavaGestión</string>
+
+    <!-- Login -->
+    <string name="login_title">LavaGestión</string>
+    <string name="login_create_account">Create account</string>
+    <string name="login_sign_in">Sign in</string>
+    <string name="login_tenant_name">Your Laundry Name</string>
+    <string name="login_tenant_name_hint">Don Pedro Laundry</string>
+    <string name="login_user_name">Your name</string>
+    <string name="login_user_name_hint">Pedro García</string>
+    <string name="login_tenant_slug">Store ID</string>
+    <string name="login_tenant_slug_hint">don-pedro-laundry</string>
+    <string name="login_email">Email</string>
+    <string name="login_email_hint">admin@mylaundry.com</string>
+    <string name="login_password">Password</string>
+    <string name="login_register_btn">Create Account</string>
+    <string name="login_enter_btn">Sign In</string>
+    <string name="login_has_account">Already have an account? Sign in</string>
+    <string name="login_no_account">Don\'t have an account? Register</string>
+    <string name="login_error">Login error</string>
+    <string name="register_error">Registration error</string>
+
+    <!-- Orders -->
+    <string name="orders_title">Orders</string>
+    <string name="orders_new">New order</string>
+    <string name="orders_empty">No orders</string>
+    <string name="orders_items">%d item(s)</string>
+    <string name="orders_advance_to">Move to %s</string>
+
+    <!-- Filters -->
+    <string name="filter_all">All</string>
+    <string name="filter_received">Received</string>
+    <string name="filter_washing">Washing</string>
+    <string name="filter_ready">Ready</string>
+    <string name="filter_delivered">Delivered</string>
+
+    <!-- Status labels -->
+    <string name="status_received">Received</string>
+    <string name="status_washing">Washing</string>
+    <string name="status_ready">Ready</string>
+    <string name="status_delivered">Delivered</string>
+
+    <!-- New order -->
+    <string name="new_order_title">New Order</string>
+    <string name="new_order_back">Back</string>
+    <string name="new_order_client_section">Customer Info</string>
+    <string name="new_order_name">Name</string>
+    <string name="new_order_name_hint">María García</string>
+    <string name="new_order_phone">Phone</string>
+    <string name="new_order_phone_hint">1155551234</string>
+    <string name="new_order_items_section">Garments</string>
+    <string name="new_order_add">Add</string>
+    <string name="new_order_item_label">Item %d</string>
+    <string name="new_order_remove">Remove</string>
+    <string name="new_order_description">Description</string>
+    <string name="new_order_description_hint">White shirt</string>
+    <string name="new_order_qty">Qty</string>
+    <string name="new_order_price">Price</string>
+    <string name="new_order_notes">Notes (optional)</string>
+    <string name="new_order_notes_hint">Stain on the collar…</string>
+    <string name="new_order_submit">Create Order</string>
+    <string name="new_order_total">Total: $%s</string>
+
+    <!-- Reports -->
+    <string name="reports_title">Daily Report</string>
+    <string name="reports_orders">Orders</string>
+    <string name="reports_income">Income</string>
+    <string name="reports_average">Average</string>
+    <string name="reports_by_status">Orders by Status</string>
+    <string name="reports_no_data">No data for this date</string>
+
+    <!-- Navigation -->
+    <string name="nav_orders">Orders</string>
+    <string name="nav_reports">Reports</string>
+    <string name="nav_settings">Settings</string>
+
+    <!-- Language selector -->
+    <string name="lang_es">ES</string>
+    <string name="lang_en">EN</string>
+    <string name="lang_ko">한</string>
+    <string name="lang_zh">中</string>
+
+    <!-- Notify -->
+    <string name="notify_title">Notify customer</string>
+    <string name="notify_message">Do you want to notify %s via WhatsApp that their order is ready?</string>
+    <string name="notify_yes">Yes, notify</string>
+    <string name="notify_no">No</string>
+    <string name="notify_btn">Notify via WhatsApp</string>
+    <string name="notify_whatsapp_text">Hi! Your order #%s is ready for pickup. We\'re waiting for you!</string>
+
+    <!-- Settings -->
+    <string name="settings_title">Settings</string>
+    <string name="settings_language">Language</string>
+    <string name="settings_lang_spanish">Español</string>
+    <string name="settings_lang_english">English</string>
+    <string name="settings_lang_korean">한국어</string>
+    <string name="settings_lang_chinese">中文</string>
+    <string name="settings_account">Account</string>
+    <string name="settings_logout">Sign out</string>
+</resources>

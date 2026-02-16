@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LavaGestión - Gestioná tu lavadero desde el celular</title>
+  <meta name="description" content="La app más simple para gestionar tu tintorería o lavadero. Pedidos, clientes y cobros desde tu celular. Descargá gratis.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ========== NAV ========== -->
+  <nav class="nav">
+    <div class="container nav-inner">
+      <a href="#" class="logo">
+        <span class="logo-icon">&#128E7;</span> LavaGestión
+      </a>
+      <div class="nav-links">
+        <a href="#features" data-i18n="navFeatures">Funciones</a>
+        <a href="#how" data-i18n="navHow">Cómo funciona</a>
+        <a href="#pricing" data-i18n="navPricing">Precios</a>
+        <a href="#faq" data-i18n="navFaq">FAQ</a>
+      </div>
+      <div class="nav-right">
+        <div class="lang-selector">
+          <button class="lang-btn active" data-lang="es">ES</button>
+          <button class="lang-btn" data-lang="en">EN</button>
+          <button class="lang-btn" data-lang="ko">한</button>
+          <button class="lang-btn" data-lang="zh">中</button>
+        </div>
+        <a href="#pricing" class="btn btn-primary btn-sm" data-i18n="navCta">Descargar gratis</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ========== HERO (Mobile first) ========== -->
+  <header class="hero">
+    <div class="container hero-inner">
+      <div class="hero-text">
+        <div class="badge-pill" data-i18n="heroBadge">App para Android</div>
+        <h1><span data-i18n="heroTitle1">Tu lavadero,</span><br><span data-i18n="heroTitle2">en el </span><span class="text-gradient" data-i18n="heroTitleGradient">bolsillo.</span></h1>
+        <p class="hero-sub" data-i18n="heroSub">
+          Gestioná pedidos, clientes y cobros desde tu celular. Un toque para cargar, un toque para cambiar estado, un toque para cobrar. Así de simple.
+        </p>
+        <div class="hero-cta">
+          <a href="#pricing" class="btn btn-primary btn-lg" data-i18n="heroCta1">Descargar gratis</a>
+          <a href="#how" class="btn btn-ghost btn-lg" data-i18n="heroCta2">Ver cómo funciona</a>
+        </div>
+        <p class="hero-note" data-i18n="heroNote">Gratis 14 días. Sin tarjeta. También disponible en versión web.</p>
+      </div>
+      <div class="hero-visual">
+        <div class="phone-frame phone-frame-hero">
+          <div class="phone-notch"></div>
+          <div class="phone-screen">
+            <div class="phone-header" data-i18n="phoneOrders">Pedidos</div>
+            <div class="phone-chips">
+              <span class="phone-chip active" data-i18n="phoneAll">Todos</span>
+              <span class="phone-chip" data-i18n="phoneReceived">Recibido</span>
+              <span class="phone-chip" data-i18n="phoneWashing">Lavando</span>
+              <span class="phone-chip" data-i18n="phoneReady">Listo</span>
+            </div>
+            <div class="phone-order">
+              <div class="phone-order-top">
+                <strong>#047</strong>
+                <span class="po-badge ready" data-i18n="phoneReady">LISTO</span>
+              </div>
+              <div>María García</div>
+              <div class="phone-order-bottom">
+                <span>3 <span data-i18n="phoneItems">prendas</span></span>
+                <strong>$2.500</strong>
+              </div>
+              <div class="phone-btn" data-i18n="phoneToDelivered">→ Pasar a Entregado</div>
+            </div>
+            <div class="phone-order">
+              <div class="phone-order-top">
+                <strong>#048</strong>
+                <span class="po-badge washing" data-i18n="phoneWashing">LAVANDO</span>
+              </div>
+              <div>Carlos López</div>
+              <div class="phone-order-bottom">
+                <span>1 <span data-i18n="phoneItem">prenda</span></span>
+                <strong>$1.800</strong>
+              </div>
+              <div class="phone-btn" data-i18n="phoneToReady">→ Pasar a Listo</div>
+            </div>
+            <div class="phone-order">
+              <div class="phone-order-top">
+                <strong>#049</strong>
+                <span class="po-badge received" data-i18n="phoneReceived">RECIBIDO</span>
+              </div>
+              <div>Ana Rodríguez</div>
+              <div class="phone-order-bottom">
+                <span>5 <span data-i18n="phoneItems">prendas</span></span>
+                <strong>$4.200</strong>
+              </div>
+            </div>
+            <div class="phone-navbar">
+              <div class="phone-nav-item active">
+                <span>&#128203;</span>
+                <small data-i18n="phoneOrders">Pedidos</small>
+              </div>
+              <div class="phone-nav-item">
+                <span>&#128200;</span>
+                <small data-i18n="phoneReports">Reportes</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========== SOCIAL PROOF BAR ========== -->
+  <section class="social-proof">
+    <div class="container">
+      <div class="proof-items">
+        <div class="proof-item">
+          <strong>+200</strong>
+          <span data-i18n="proofShops">lavaderos activos</span>
+        </div>
+        <div class="proof-divider"></div>
+        <div class="proof-item">
+          <strong>+15.000</strong>
+          <span data-i18n="proofOrders">pedidos gestionados</span>
+        </div>
+        <div class="proof-divider"></div>
+        <div class="proof-item">
+          <strong>4.8 &#9733;</strong>
+          <span data-i18n="proofRating">valoración promedio</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== PAIN POINTS ========== -->
+  <section class="pain-section">
+    <div class="container">
+      <h2 class="section-title" data-i18n="painTitle">¿Seguís anotando en papel?</h2>
+      <p class="section-sub-center" data-i18n="painSub">Estos problemas te cuestan plata todos los días</p>
+      <div class="pain-grid">
+        <div class="pain-card">
+          <span class="pain-emoji">&#128196;</span>
+          <h3 data-i18n="pain1Title">Tickets que se pierden</h3>
+          <p data-i18n="pain1Text">El cliente viene, no encontrás el papel. Mala imagen y tiempo perdido.</p>
+        </div>
+        <div class="pain-card">
+          <span class="pain-emoji">&#128534;</span>
+          <h3 data-i18n="pain2Title">Prendas confundidas</h3>
+          <p data-i18n="pain2Text">Sin un sistema claro, las prendas se mezclan. Reclamos y dolores de cabeza.</p>
+        </div>
+        <div class="pain-card">
+          <span class="pain-emoji">&#128176;</span>
+          <h3 data-i18n="pain3Title">Cero control de plata</h3>
+          <p data-i18n="pain3Text">¿Cuánto facturaste hoy? No sabés. Al final del mes, menos.</p>
+        </div>
+        <div class="pain-card">
+          <span class="pain-emoji">&#128222;</span>
+          <h3 data-i18n="pain4Title">"¿Ya está mi ropa?"</h3>
+          <p data-i18n="pain4Text">Te llaman 20 veces por día. Perdés tiempo, el cliente se frustra.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SOLUTION: APP FEATURES ========== -->
+  <section class="solution-section" id="features">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title" data-i18n="featuresTitle">Una app, todo resuelto</h2>
+        <p class="section-sub" data-i18n="featuresSub">Diseñada para dueños de lavaderos que quieren algo simple. Nada de complicaciones.</p>
+      </div>
+
+      <!-- Feature 1: Crear pedido -->
+      <div class="feature-showcase">
+        <div class="feature-showcase-text">
+          <div class="feature-number">01</div>
+          <h3 data-i18n="feat1Title">Cargá un pedido en 15 segundos</h3>
+          <p data-i18n="feat1Text">Nombre, teléfono, prendas, precio. Listo. El ticket se genera solo con número único. El cliente queda registrado para siempre.</p>
+        </div>
+        <div class="feature-showcase-visual">
+          <div class="phone-frame phone-frame-sm">
+            <div class="phone-notch"></div>
+            <div class="phone-screen">
+              <div class="phone-header-sm" data-i18n="phoneNewOrder">← Nuevo Pedido</div>
+              <div class="phone-form">
+                <div class="phone-field"><span class="phone-label" data-i18n="phoneName">Nombre</span><span class="phone-value">María García</span></div>
+                <div class="phone-field"><span class="phone-label" data-i18n="phonePhone">Teléfono</span><span class="phone-value">1155551234</span></div>
+                <div class="phone-divider"></div>
+                <div class="phone-field"><span class="phone-label">Camisa blanca</span><span class="phone-value">2 × $500</span></div>
+                <div class="phone-field"><span class="phone-label">Pantalón vestir</span><span class="phone-value">1 × $800</span></div>
+                <div class="phone-field"><span class="phone-label">Saco</span><span class="phone-value">1 × $700</span></div>
+                <div class="phone-divider"></div>
+                <div class="phone-field total"><span data-i18n="phoneTotal">Total</span><strong>$2.500</strong></div>
+                <div class="phone-btn" data-i18n="phoneCreateOrder">Crear Pedido</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Feature 2: Cambiar estado -->
+      <div class="feature-showcase reverse">
+        <div class="feature-showcase-text">
+          <div class="feature-number">02</div>
+          <h3 data-i18n="feat2Title">Cambiá el estado con un toque</h3>
+          <p data-i18n="feat2Text">Recibido → Lavando → Listo → Entregado. Un botón y listo. Cuando marcás "Listo", el cliente recibe un WhatsApp automático. No te llama más.</p>
+        </div>
+        <div class="feature-showcase-visual">
+          <div class="phone-frame phone-frame-sm">
+            <div class="phone-notch"></div>
+            <div class="phone-screen">
+              <div class="phone-header-sm" data-i18n="phoneOrders">Pedidos</div>
+              <div class="phone-order">
+                <div class="phone-order-top">
+                  <strong>#047</strong>
+                  <span class="po-badge washing" data-i18n="phoneWashing">LAVANDO</span>
+                </div>
+                <div>María García</div>
+                <div class="phone-order-bottom">
+                  <span>3 <span data-i18n="phoneItems">prendas</span></span>
+                  <strong>$2.500</strong>
+                </div>
+                <div class="phone-btn pulse" data-i18n="phoneToReady">→ Pasar a Listo</div>
+              </div>
+              <div class="whatsapp-bubble">
+                <span class="wa-icon">&#128172;</span>
+                <p data-i18n="whatsappMsg">¡Hola María! Tu pedido #047 está LISTO para retirar. ¡Te esperamos!</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Feature 3: Reportes -->
+      <div class="feature-showcase">
+        <div class="feature-showcase-text">
+          <div class="feature-number">03</div>
+          <h3 data-i18n="feat3Title">Sabé cuánto facturás. De verdad.</h3>
+          <p data-i18n="feat3Text">Ingresos del día, cantidad de pedidos, ticket promedio. Todo automático. En dos segundos sabés cómo va tu negocio.</p>
+        </div>
+        <div class="feature-showcase-visual">
+          <div class="phone-frame phone-frame-sm">
+            <div class="phone-notch"></div>
+            <div class="phone-screen">
+              <div class="phone-header-sm" data-i18n="phoneDailyReport">Reporte Diario</div>
+              <div class="phone-stats">
+                <div class="phone-stat">
+                  <span class="phone-stat-value">12</span>
+                  <span class="phone-stat-label" data-i18n="phoneOrdersLabel">Pedidos</span>
+                </div>
+                <div class="phone-stat">
+                  <span class="phone-stat-value">$18.400</span>
+                  <span class="phone-stat-label" data-i18n="phoneIncome">Ingresos</span>
+                </div>
+                <div class="phone-stat">
+                  <span class="phone-stat-value">$1.533</span>
+                  <span class="phone-stat-label" data-i18n="phoneAverage">Promedio</span>
+                </div>
+              </div>
+              <div class="phone-status-list">
+                <div class="phone-status-row"><span class="po-badge received" data-i18n="phoneReceived">RECIBIDO</span><strong>3</strong></div>
+                <div class="phone-status-row"><span class="po-badge washing" data-i18n="phoneWashing">LAVANDO</span><strong>4</strong></div>
+                <div class="phone-status-row"><span class="po-badge ready" data-i18n="phoneReady">LISTO</span><strong>2</strong></div>
+                <div class="phone-status-row"><span class="po-badge delivered" data-i18n="phoneDelivered">ENTREGADO</span><strong>3</strong></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== WEB DASHBOARD (Secondary) ========== -->
+  <section class="dashboard-section">
+    <div class="container dashboard-inner">
+      <div class="section-header">
+        <div class="badge-pill" data-i18n="dashBadge">También en computadora</div>
+        <h2 class="section-title" data-i18n="dashTitle">¿Preferís pantalla grande? Tenemos dashboard web</h2>
+        <p class="section-sub" data-i18n="dashSub">La misma cuenta, los mismos datos. Usá la app en el mostrador y el dashboard en la oficina. Todo sincronizado.</p>
+      </div>
+      <div class="dashboard-preview">
+        <div class="app-preview">
+          <div class="preview-header">
+            <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+            <span class="preview-title" data-i18n="dashPreviewTitle">LavaGestión - Dashboard</span>
+          </div>
+          <div class="preview-body">
+            <div class="preview-order">
+              <div class="po-left">
+                <span class="po-ticket">#047</span>
+                <div>
+                  <strong>María García</strong>
+                  <small>3 prendas · $2.500</small>
+                </div>
+              </div>
+              <span class="po-badge ready" data-i18n="phoneReady">LISTO</span>
+            </div>
+            <div class="preview-order">
+              <div class="po-left">
+                <span class="po-ticket">#048</span>
+                <div>
+                  <strong>Carlos López</strong>
+                  <small>1 prenda · $1.800</small>
+                </div>
+              </div>
+              <span class="po-badge washing" data-i18n="phoneWashing">LAVANDO</span>
+            </div>
+            <div class="preview-stats">
+              <div class="ps-item">
+                <span class="ps-value">$18.400</span>
+                <span class="ps-label">Hoy</span>
+              </div>
+              <div class="ps-item">
+                <span class="ps-value">12</span>
+                <span class="ps-label" data-i18n="phoneOrdersLabel">Pedidos</span>
+              </div>
+              <div class="ps-item">
+                <span class="ps-value">$1.533</span>
+                <span class="ps-label" data-i18n="phoneAverage">Promedio</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== HOW IT WORKS ========== -->
+  <section class="how-section" id="how">
+    <div class="container">
+      <h2 class="section-title" data-i18n="howTitle">Empezá en 2 minutos</h2>
+      <div class="steps-grid">
+        <div class="step-card">
+          <div class="step-number">1</div>
+          <h3 data-i18n="how1Title">Descargá la app</h3>
+          <p data-i18n="how1Text">Instalala en tu celular. Creá tu cuenta con el nombre de tu lavadero.</p>
+        </div>
+        <div class="step-arrow">→</div>
+        <div class="step-card">
+          <div class="step-number">2</div>
+          <h3 data-i18n="how2Title">Cargá el primer pedido</h3>
+          <p data-i18n="how2Text">Nombre, teléfono, prendas y precio. 15 segundos y listo.</p>
+        </div>
+        <div class="step-arrow">→</div>
+        <div class="step-card">
+          <div class="step-number">3</div>
+          <h3 data-i18n="how3Title">Gestioná todo con un toque</h3>
+          <p data-i18n="how3Text">Cambiá estados, avisá al cliente, mirá cuánto facturaste. Todo desde el celu.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== TESTIMONIALS ========== -->
+  <section class="testimonials-section">
+    <div class="container">
+      <h2 class="section-title" data-i18n="testTitle">Lo que dicen nuestros clientes</h2>
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p data-i18n="test1Text">"Lo uso desde el celular todo el día. Cargo pedidos en el mostrador y listo. Nunca más papel."</p>
+          <div class="testimonial-author">
+            <strong data-i18n="test1Name">Roberto Méndez</strong>
+            <span data-i18n="test1Place">Lavandería Express, Buenos Aires</span>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p data-i18n="test2Text">"El WhatsApp automático fue un antes y un después. Los clientes ya no llaman, vienen directo cuando está listo."</p>
+          <div class="testimonial-author">
+            <strong data-i18n="test2Name">Patricia Vega</strong>
+            <span data-i18n="test2Place">Tintorería Premium, Lima</span>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p data-i18n="test3Text">"Por fin sé cuánto facturo por día. Abro la app, miro el reporte y ya está. Cero complicación."</p>
+          <div class="testimonial-author">
+            <strong data-i18n="test3Name">Diego Salazar</strong>
+            <span data-i18n="test3Place">Lavadero Don Diego, Bogotá</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== PRICING ========== -->
+  <section class="pricing-section" id="pricing">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title" data-i18n="priceTitle">Precios simples, sin letra chica</h2>
+        <p class="section-sub" data-i18n="priceSub">Empezá gratis. Pagá solo si te sirve.</p>
+      </div>
+      <div class="pricing-grid">
+        <div class="pricing-card">
+          <div class="pricing-name" data-i18n="priceFree">Gratis</div>
+          <div class="pricing-price" data-i18n="priceFreeAmount">$0</div>
+          <div class="pricing-period" data-i18n="priceFreePeriod">14 días de prueba</div>
+          <ul class="pricing-features">
+            <li data-i18n="priceFreeF1">App Android completa</li>
+            <li data-i18n="priceFreeF2">Dashboard web incluido</li>
+            <li data-i18n="priceFreeF3">Hasta 50 pedidos</li>
+            <li data-i18n="priceFreeF4">1 usuario</li>
+          </ul>
+          <a href="#" class="btn btn-outline btn-block" data-i18n="priceFreeCta">Descargar gratis</a>
+        </div>
+        <div class="pricing-card popular">
+          <div class="popular-badge" data-i18n="priceProBadge">Más elegido</div>
+          <div class="pricing-name" data-i18n="priceProName">Profesional</div>
+          <div class="pricing-price">$9.990<span>/mes</span></div>
+          <div class="pricing-period" data-i18n="priceProPeriod">ARS · Facturación mensual</div>
+          <ul class="pricing-features">
+            <li data-i18n="priceProF1">App + Dashboard ilimitados</li>
+            <li data-i18n="priceProF2">Pedidos ilimitados</li>
+            <li data-i18n="priceProF3">Hasta 3 usuarios</li>
+            <li data-i18n="priceProF4">WhatsApp automático</li>
+            <li data-i18n="priceProF5">Reportes completos</li>
+          </ul>
+          <a href="#" class="btn btn-primary btn-block" data-i18n="priceProCta">Empezar prueba gratis</a>
+        </div>
+        <div class="pricing-card">
+          <div class="pricing-name" data-i18n="priceBizName">Negocio</div>
+          <div class="pricing-price">$19.990<span>/mes</span></div>
+          <div class="pricing-period" data-i18n="priceBizPeriod">ARS · Facturación mensual</div>
+          <ul class="pricing-features">
+            <li data-i18n="priceBizF1">Todo lo de Profesional</li>
+            <li data-i18n="priceBizF2">Usuarios ilimitados</li>
+            <li data-i18n="priceBizF3">Múltiples sucursales</li>
+            <li data-i18n="priceBizF4">Soporte telefónico</li>
+          </ul>
+          <a href="#" class="btn btn-outline btn-block" data-i18n="priceBizCta">Contactar ventas</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FAQ ========== -->
+  <section class="faq-section" id="faq">
+    <div class="container container-sm">
+      <h2 class="section-title" data-i18n="faqTitle">Preguntas frecuentes</h2>
+      <div class="faq-list">
+        <details class="faq-item">
+          <summary data-i18n="faq1Q">¿La app es gratis?</summary>
+          <p data-i18n="faq1A">Sí, la descarga es gratis y tenés 14 días para probar todas las funciones sin límite. Después elegís un plan.</p>
+        </details>
+        <details class="faq-item">
+          <summary data-i18n="faq2Q">¿Solo funciona en celular?</summary>
+          <p data-i18n="faq2A">No. Tenés la app Android para el día a día y un dashboard web para cuando quieras usar la computadora. Misma cuenta, mismos datos.</p>
+        </details>
+        <details class="faq-item">
+          <summary data-i18n="faq3Q">¿Necesito saber de tecnología?</summary>
+          <p data-i18n="faq3A">Para nada. Si sabés usar WhatsApp, sabés usar LavaGestión. Está diseñada para ser ultra simple.</p>
+        </details>
+        <details class="faq-item">
+          <summary data-i18n="faq4Q">¿El WhatsApp al cliente tiene costo extra?</summary>
+          <p data-i18n="faq4A">No, está incluido en el plan Profesional y Negocio. Se envía automáticamente cuando marcás un pedido como "Listo".</p>
+        </details>
+        <details class="faq-item">
+          <summary data-i18n="faq5Q">¿Y si no tengo Android?</summary>
+          <p data-i18n="faq5A">Podés usar el dashboard web desde el navegador de cualquier celular, tablet o computadora. La app para iOS está en desarrollo.</p>
+        </details>
+        <details class="faq-item">
+          <summary data-i18n="faq6Q">¿Puedo cancelar cuando quiera?</summary>
+          <p data-i18n="faq6A">Sí, sin penalidad. Cancelás desde tu cuenta con un toque. Sin llamadas ni trámites.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FINAL CTA ========== -->
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-box">
+        <h2 data-i18n="ctaTitle">Descargá la app y empezá hoy</h2>
+        <p data-i18n="ctaSub">Tu lavadero organizado en 2 minutos. Gratis por 14 días.</p>
+        <a href="#" class="btn btn-white btn-lg" data-i18n="ctaBtn">Descargar para Android</a>
+        <p class="cta-note" data-i18n="ctaNote">También disponible como dashboard web</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <span class="logo">&#128E7; LavaGestión</span>
+        <p data-i18n="footerDesc">La app más simple para gestionar tu tintorería o lavadero.</p>
+      </div>
+      <div class="footer-links">
+        <div>
+          <h4 data-i18n="footerProduct">Producto</h4>
+          <a href="#features" data-i18n="navFeatures">Funciones</a>
+          <a href="#pricing" data-i18n="navPricing">Precios</a>
+          <a href="#faq" data-i18n="navFaq">FAQ</a>
+        </div>
+        <div>
+          <h4 data-i18n="footerPlatforms">Plataformas</h4>
+          <a href="#" data-i18n="footerAndroid">Android</a>
+          <a href="#" data-i18n="footerWeb">Dashboard web</a>
+          <a href="#" data-i18n="footerIos">iOS (pronto)</a>
+        </div>
+        <div>
+          <h4 data-i18n="footerLegal">Legal</h4>
+          <a href="#" data-i18n="footerTerms">Términos</a>
+          <a href="#" data-i18n="footerPrivacy">Privacidad</a>
+        </div>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p data-i18n="footerCopy">&copy; 2026 LavaGestión. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="i18n.js"></script>
+</body>
+</html>

@@ -1,0 +1,101 @@
+<resources>
+    <string name="app_name">LavaGestión</string>
+
+    <!-- Login -->
+    <string name="login_title">LavaGestión</string>
+    <string name="login_create_account">创建账户</string>
+    <string name="login_sign_in">登录</string>
+    <string name="login_tenant_name">洗衣店名称</string>
+    <string name="login_tenant_name_hint">唐佩德罗洗衣店</string>
+    <string name="login_user_name">您的姓名</string>
+    <string name="login_user_name_hint">Pedro García</string>
+    <string name="login_tenant_slug">店铺 ID</string>
+    <string name="login_tenant_slug_hint">don-pedro-laundry</string>
+    <string name="login_email">邮箱</string>
+    <string name="login_email_hint">admin@mylaundry.com</string>
+    <string name="login_password">密码</string>
+    <string name="login_register_btn">创建账户</string>
+    <string name="login_enter_btn">登录</string>
+    <string name="login_has_account">已有账户？登录</string>
+    <string name="login_no_account">没有账户？注册</string>
+    <string name="login_error">登录错误</string>
+    <string name="register_error">注册错误</string>
+
+    <!-- Orders -->
+    <string name="orders_title">订单</string>
+    <string name="orders_new">新订单</string>
+    <string name="orders_empty">没有订单</string>
+    <string name="orders_items">%d件</string>
+    <string name="orders_advance_to">移至%s</string>
+
+    <!-- Filters -->
+    <string name="filter_all">全部</string>
+    <string name="filter_received">已接收</string>
+    <string name="filter_washing">洗涤中</string>
+    <string name="filter_ready">已完成</string>
+    <string name="filter_delivered">已取件</string>
+
+    <!-- Status labels -->
+    <string name="status_received">已接收</string>
+    <string name="status_washing">洗涤中</string>
+    <string name="status_ready">已完成</string>
+    <string name="status_delivered">已取件</string>
+
+    <!-- New order -->
+    <string name="new_order_title">新订单</string>
+    <string name="new_order_back">返回</string>
+    <string name="new_order_client_section">客户信息</string>
+    <string name="new_order_name">姓名</string>
+    <string name="new_order_name_hint">María García</string>
+    <string name="new_order_phone">电话</string>
+    <string name="new_order_phone_hint">1155551234</string>
+    <string name="new_order_items_section">衣物</string>
+    <string name="new_order_add">添加</string>
+    <string name="new_order_item_label">衣物 %d</string>
+    <string name="new_order_remove">删除</string>
+    <string name="new_order_description">描述</string>
+    <string name="new_order_description_hint">白色衬衫</string>
+    <string name="new_order_qty">数量</string>
+    <string name="new_order_price">价格</string>
+    <string name="new_order_notes">备注（选填）</string>
+    <string name="new_order_notes_hint">领口有污渍…</string>
+    <string name="new_order_submit">创建订单</string>
+    <string name="new_order_total">合计：$%s</string>
+
+    <!-- Reports -->
+    <string name="reports_title">每日报告</string>
+    <string name="reports_orders">订单</string>
+    <string name="reports_income">收入</string>
+    <string name="reports_average">平均</string>
+    <string name="reports_by_status">按状态统计</string>
+    <string name="reports_no_data">该日期无数据</string>
+
+    <!-- Navigation -->
+    <string name="nav_orders">订单</string>
+    <string name="nav_reports">报告</string>
+    <string name="nav_settings">设置</string>
+
+    <!-- Language selector -->
+    <string name="lang_es">ES</string>
+    <string name="lang_en">EN</string>
+    <string name="lang_ko">한</string>
+    <string name="lang_zh">中</string>
+
+    <!-- Notify -->
+    <string name="notify_title">通知客户</string>
+    <string name="notify_message">是否通过WhatsApp通知%s订单已完成？</string>
+    <string name="notify_yes">是，通知</string>
+    <string name="notify_no">否</string>
+    <string name="notify_btn">通过WhatsApp通知</string>
+    <string name="notify_whatsapp_text">您好！您的订单 #%s 已准备好取件。我们等您来取！</string>
+
+    <!-- Settings -->
+    <string name="settings_title">设置</string>
+    <string name="settings_language">语言</string>
+    <string name="settings_lang_spanish">Español</string>
+    <string name="settings_lang_english">English</string>
+    <string name="settings_lang_korean">한국어</string>
+    <string name="settings_lang_chinese">中文</string>
+    <string name="settings_account">账户</string>
+    <string name="settings_logout">退出登录</string>
+</resources>
