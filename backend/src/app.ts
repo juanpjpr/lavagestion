@@ -1,7 +1,7 @@
 import express from 'express';
 import cors from 'cors';
 import path from 'path';
-import { env } from './config/env';
+
 import { errorHandler } from './middlewares/errorHandler';
 import { authenticate } from './middlewares/auth';
 
@@ -14,7 +14,7 @@ import reportsRoutes from './modules/reports/reports.routes';
 const app = express();
 
 // --- Global Middleware ---
-app.use(cors({ origin: env.FRONTEND_URL, credentials: true }));
+app.use(cors({ origin: true, credentials: true }));
 app.use(express.json());
 
 // --- Health check ---
