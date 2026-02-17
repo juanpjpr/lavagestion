@@ -83,8 +83,8 @@ const translations: Record<Lang, Record<string, string>> = {
     notify_yes: 'Sí, avisar',
     notify_no: 'No',
     notify_btn: 'WhatsApp',
-    notify_whatsapp_pre: 'Hola! Tu pedido #',
-    notify_whatsapp_post: ' está listo para retirar. Te esperamos!',
+    notify_whatsapp_pre: '¡Hola! Tu pedido #',
+    notify_whatsapp_post: ' está listo para retirar. ¡Te esperamos!',
 
     // Settings
     settings_title: 'Ajustes',
