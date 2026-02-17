@@ -8,6 +8,7 @@ import { NewOrderPage } from './pages/NewOrderPage';
 import { ReportsPage } from './pages/ReportsPage';
 import { SettingsPage } from './pages/SettingsPage';
 import { isAuthenticated } from './services/api';
+import { I18nProvider } from './i18n';
 import './styles.css';
 
 function ProtectedRoute({ children }: { children: React.ReactNode }) {
@@ -17,6 +18,7 @@ function ProtectedRoute({ children }: { children: React.ReactNode }) {
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
+    <I18nProvider>
     <BrowserRouter basename="/app">
       <Routes>
         <Route path="/login" element={<LoginPage />} />
@@ -36,5 +38,6 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
         </Route>
       </Routes>
     </BrowserRouter>
+    </I18nProvider>
   </React.StrictMode>,
 );

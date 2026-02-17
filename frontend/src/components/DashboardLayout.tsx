@@ -1,9 +1,11 @@
 import { useState } from 'react';
 import { NavLink, Outlet, useNavigate } from 'react-router-dom';
 import { logout, getCurrentTenant, getCurrentUser } from '../services/api';
+import { useI18n } from '../i18n';
 
 export function DashboardLayout() {
   const navigate = useNavigate();
+  const { t } = useI18n();
   const tenant = getCurrentTenant();
   const user = getCurrentUser();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -21,26 +23,26 @@ export function DashboardLayout() {
         <nav>
           <NavLink to="/orders" className={({ isActive }) => isActive ? 'active' : ''}>
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2"/><rect x="9" y="3" width="6" height="4" rx="1"/><path d="M9 14l2 2 4-4"/></svg>
-            Pedidos
+            {t('nav_orders')}
           </NavLink>
           <NavLink to="/orders/new" className={({ isActive }) => isActive ? 'active' : ''}>
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v8M8 12h8"/></svg>
-            Nuevo Pedido
+            {t('orders_new')}
           </NavLink>
           <NavLink to="/reports" className={({ isActive }) => isActive ? 'active' : ''}>
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="3" y="12" width="4" height="8"/><rect x="10" y="8" width="4" height="12"/><rect x="17" y="4" width="4" height="16"/></svg>
-            Reportes
+            {t('nav_reports')}
           </NavLink>
           <NavLink to="/settings" className={({ isActive }) => isActive ? 'active' : ''}>
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="3"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
-            Ajustes
+            {t('nav_settings')}
           </NavLink>
         </nav>
         <div className="sidebar-user">
           <span>{user?.name}</span>
         </div>
         <button className="logout-btn" onClick={handleLogout}>
-          Cerrar sesión
+          {t('settings_logout')}
         </button>
       </aside>
 
@@ -66,7 +68,7 @@ export function DashboardLayout() {
               <span>{user?.email}</span>
             </div>
             <button className="mobile-menu-logout" onClick={handleLogout}>
-              Cerrar sesión
+              {t('settings_logout')}
             </button>
           </div>
         </div>
@@ -76,23 +78,23 @@ export function DashboardLayout() {
         <Outlet />
       </main>
 
-      {/* Mobile Bottom Navigation (like Android) */}
+      {/* Mobile Bottom Navigation */}
       <nav className="bottom-nav">
         <NavLink to="/orders" className={({ isActive }) => `bottom-nav-item ${isActive ? 'active' : ''}`} end>
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2"/><rect x="9" y="3" width="6" height="4" rx="1"/></svg>
-          <span>Pedidos</span>
+          <span>{t('nav_orders')}</span>
         </NavLink>
         <NavLink to="/orders/new" className={({ isActive }) => `bottom-nav-item ${isActive ? 'active' : ''}`}>
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v8M8 12h8"/></svg>
-          <span>Nuevo</span>
+          <span>{t('nav_new')}</span>
         </NavLink>
         <NavLink to="/reports" className={({ isActive }) => `bottom-nav-item ${isActive ? 'active' : ''}`}>
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="3" y="12" width="4" height="8"/><rect x="10" y="8" width="4" height="12"/><rect x="17" y="4" width="4" height="16"/></svg>
-          <span>Reportes</span>
+          <span>{t('nav_reports')}</span>
         </NavLink>
         <NavLink to="/settings" className={({ isActive }) => `bottom-nav-item ${isActive ? 'active' : ''}`}>
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="3"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
-          <span>Ajustes</span>
+          <span>{t('nav_settings')}</span>
         </NavLink>
       </nav>
     </div>
